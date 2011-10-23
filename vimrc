@@ -39,15 +39,20 @@ augroup drupal
 augroup END
 
 " uncomment to highlight code lines and comments > 80 characters
-" :highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
-" :match OverLength '\%81v.*'
+" highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
+" match OverLength '\%81v.*'
 
 "===============================
 " PHP SETTINGS
 "===============================
 
 " autocompletion for php functions
-:autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " for highlighting parent error ] or )
 " let php_parent_error_close = 1  
