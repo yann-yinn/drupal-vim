@@ -1,9 +1,38 @@
+"===============================
+" GENERAL SETTINGS
+"===============================
+
+"necessary on some Linux distros for pathogen to properly load bundles
+filetype on
+filetype off
+
 " use of pathogen plugin to keep each plugin in its own folder.
 call pathogen#infect() 
+" call ExtractSnips('drupal-snippets', 'drupal')
+
+"Use Vim settings, rather then Vi settings (much better!).
+"This must be first, because it changes other options as a side effect.
+set nocompatible
+
+"load ftplugins and indent files
+filetype plugin on
+filetype indent on
+
+" syntax coloration
+syntax on
+   
+" our default colorscheme use 256 colors
+set t_Co=256
+
+" default colorsheme
+colorscheme xoria256
 
 "===============================
 " DRUPAL SETTINGS
 "===============================
+
+" always edit in utf-8
+set encoding=utf-8
 
 " allow to go to the declaration of a function with <ctrl-]>
 set tags +=~/.vim/tags/drupal6.tags
@@ -19,9 +48,6 @@ set expandtab
 
 "sets tab and shiftwidth to 2 spaces according to drupals coding standard
 set tabstop=2 shiftwidth=2 softtabstop=2
-
-" spaces for indention
-filetype indent plugin on
 
 "use the same indent from current line when starting a new line
 set autoindent
@@ -50,33 +76,9 @@ augroup END
 
 " autocompletion for php functions
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " for highlighting parent error ] or )
 let php_parent_error_close = 1  
-
-"=============================
-" GLOBAL SETTINGS
-"=============================
-
-" syntax coloration
-syntax on
-   
-" always edit in utf-8
-set encoding=utf-8
-
-" non-compatible avec vi. Permet de pousser plus loin la configuration
-set nocompatible
-
-" our defautl colorscheme use 256 colors
-set t_Co=256
-
-" default colorsheme
-colorscheme xoria256
 
 "================================
 " feel more cumfortable

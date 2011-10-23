@@ -10,3 +10,4 @@ vim-pathogen : clean installation / removal of plug-ins
 vim as a php editor : http://zmievski.org/2007/02/vim-for-php-programmers-slides-and-resources.
 a simple and efficient vimrc : http://groups.drupal.org/node/4088
 snipMate snippets for Drupal 7 : https://github.com/blup/snippets
+nice vimrc :  https://github.com/akitaonrails/vimfiles/blob/master/vimrc
