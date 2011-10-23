@@ -86,6 +86,10 @@ let php_parent_error_close = 1
 " feel more cumfortable
 "================================
 
+" \ is definitly to difficult to reach !
+let mapleader = ";"
+let maplocalleader=";"
+
 " montrer les numéros de lignes
 set nu
 
