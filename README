@@ -6,13 +6,16 @@ It also contains two simple scripts to
 It already contains a drupal 6 dictionnary and a bundle of snippets for hooks
 and commun php functions.
 
-SOURCES :
+PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
 project : emulate a file explorer with a simple and editable text file.
 snipMate : a nice snippet generator : just type "hook_menu", press tab and it will generate a hook_menu for you :-)
 
-Inspiration :
+Sources :
+- D6 snippets from https://github.com/theunraveler/Drupal-Snippets-for-Vim
+- D7 snippets from https://github.com/blup/snippets 
 - vim as a php editor : http://zmievski.org/2007/02/vim-for-php-programmers-slides-and-resources.
 - a simple and efficient vimrc : http://groups.drupal.org/node/4088
 - snipMate snippets for Drupal 7 : https://github.com/blup/snippets
 - nice vimrc :  https://github.com/akitaonrails/vimfiles/blob/master/vimrc
+
