@@ -100,9 +100,18 @@ set hlsearch
 " not compatible with snipmate ??
 " set paste
 
+" boucler sur le fichier pour naviguer dans les résultat de la recherche
+set wrapscan
+
+" ignorer la casse pour les recherches
+set ignorecase
+
+"... mais si on cherche en majuscule, donner la priorité aux mots en majuscules
+set smartcase
+
+" les swap files me cassent les c*****
+set noswapfile
+
 " Toujours laisser des lignes visibles (içi 5) au dessus/en dessous du curseur quand on
 " atteint le début ou la fin de l'écran :
 set scrolloff=5
-
-" boucler sur le fichier pour naviguer dans les résultat de la recherche
-set wrapscan
