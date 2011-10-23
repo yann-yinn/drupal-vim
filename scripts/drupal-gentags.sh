@@ -1,4 +1,5 @@
 #!/bin/bash
+# generate tags for drupal 6 with exubertant-ctags
 echo "Enter project name,  this will generate a tags file with this name :"
 read project_name
 echo "begin tags generation ..."
