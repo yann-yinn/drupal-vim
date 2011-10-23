@@ -56,6 +56,8 @@ set autoindent
 set smartindent
 
 " ensure that drupal extensions are read as php files.
+" 'drupal' is added because we want snipMate to load
+" snippets located in snippets/drupal directory
 augroup drupal
   autocmd BufRead,BufNewFile *.module set filetype=php.drupal
   autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
