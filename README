@@ -1,4 +1,11 @@
-sources :
+Drupal-vim is a simple drupal-friendly vim configuration.
+It also contains two simple scripts to
+- generate tags for a project (that will be stored to ~/.vim/tags directory)
+- generate a dictionary for a project (that will be stored in dictionnaries directory).
+
+It already contains a drupal 6 dictionnary.
+
+SOURCES :
 vim-pathogen : clean installation / removal of plug-ins
 vim as a php editor : http://zmievski.org/2007/02/vim-for-php-programmers-slides-and-resources.
 a simple and efficient vimrc : http://groups.drupal.org/node/4088
