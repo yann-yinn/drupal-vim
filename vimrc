@@ -35,9 +35,9 @@ colorscheme xoria256
 set encoding=utf-8
 
 " allow to go to the declaration of a function with <ctrl-]>
-set tags +=~/.vim/tags/drupal6.tags
+" set tags +=~/.vim/tags/examle.tags
 
-" set tags +=~/.vim/tags/drupal7-core.tags
+"add drupal6 function as a dictionnary. allow autocompletion via ctrl-n
 set dict +=~/.vim/dictionaries/drupal6.dict
 
 " add dictionaries to autocomplete shortcut (crtl-p, ctrl-n)
