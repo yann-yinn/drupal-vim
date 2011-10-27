@@ -4,7 +4,7 @@
 
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
-filetype off
+"filetype off
 
 " use of pathogen plugin to keep each plugin in its own folder.
 call pathogen#infect() 
@@ -35,7 +35,7 @@ colorscheme xoria256
 set encoding=utf-8
 
 " allow to go to the declaration of a function with <ctrl-]>
-" set tags +=~/.vim/tags/examle.tags
+set tags+=~/.vim/tags/aef-trunk.tags
 
 "add drupal6 function as a dictionnary. allow autocompletion via ctrl-n
 set dict +=~/.vim/dictionaries/drupal6.dict
@@ -82,6 +82,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " for highlighting parent error ] or )
 let php_parent_error_close = 1  
 
+" help for commenting functions
+set syntax=php.doxygen
+
 "================================
 " feel more cumfortable
 "================================
@@ -115,3 +118,29 @@ set noswapfile
 " Toujours laisser des lignes visibles (içi 5) au dessus/en dessous du curseur quand on
 " atteint le début ou la fin de l'écran :
 set scrolloff=5
+
+"================================
+" PLUGIN TAGLIST
+"================================
+
+" le plugin taglist doit connaitre l'emplacement du binaire ctags
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
+
+"F12 Switch on/off de la fenêtre du plugin TagList
+nnoremap <silent> <F12> :TlistToggle<CR>
+
+" afficher la liste de tags dans le menu de GVIM
+let Tlist_Show_Menu=1
+
+" n'afficher les tags que pour le fichier courant
+let Tlist_Show_One_File=1
+
+" afficher la fenêtre de taglist dans une barre à droite
+let Tlist_Use_Right_Window=1
+
+" les noms de fonctions de drupal peuvent être loooooooooooooongs.
+let Tlist_WinWidth=50
+
+" n'afficher que les constantes, les classes et les fonctions. 
+" Les variables prennent de la place et ne me servent à rien
+let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
