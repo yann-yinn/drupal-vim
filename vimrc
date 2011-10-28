@@ -2,21 +2,15 @@
 " GENERAL SETTINGS
 "===============================
 
-"necessary on some Linux distros for pathogen to properly load bundles
-filetype on
-"filetype off
-
 " use of pathogen plugin to keep each plugin in its own folder.
 call pathogen#infect() 
-" call ExtractSnips('drupal-snippets', 'drupal')
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
+"load file type plugins and indent files
+filetype indent plugin on
 
 " syntax coloration
 syntax on
@@ -59,13 +53,13 @@ set smartindent
 " 'drupal' is added because we want snipMate to load
 " snippets located in snippets/drupal directory
 augroup drupal
-  autocmd BufRead,BufNewFile *.module set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.theme set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.inc set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.install set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.engine set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.profile set filetype=php.drupal
-  autocmd BufRead,BufNewFile *.test set filetype=php.drupal
+  autocmd BufRead,BufNewFile *.module set filetype=php
+  autocmd BufRead,BufNewFile *.theme set filetype=php
+  autocmd BufRead,BufNewFile *.inc set filetype=php
+  autocmd BufRead,BufNewFile *.install set filetype=php
+  autocmd BufRead,BufNewFile *.engine set filetype=php
+  autocmd BufRead,BufNewFile *.profile set filetype=php
+  autocmd BufRead,BufNewFile *.test set filetype=php
 augroup END
 
 " uncomment to highlight code lines and comments > 80 characters
@@ -76,14 +70,18 @@ augroup END
 " PHP SETTINGS
 "===============================
 
-" autocompletion for php functions
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+" activer l'omnicompletion pour tous les langages
+set omnifunc=syntaxcomplete#Complete
 
 " for highlighting parent error ] or )
 let php_parent_error_close = 1  
 
 " help for commenting functions
 set syntax=php.doxygen
+
+" utiliser le compilateur php pour pouvoir vérifier la syntaxe
+" avec ':make %' sur un fichier
+set makeprg=php
 
 "================================
 " feel more cumfortable
@@ -144,3 +142,12 @@ let Tlist_WinWidth=50
 " n'afficher que les constantes, les classes et les fonctions. 
 " Les variables prennent de la place et ne me servent à rien
 let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
+let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
+
+
+"================================
+" PLUGIN PROJECT
+"================================
+
+" show / hide project window
+nmap <silent> <F9> <Plug>ToggleProject
