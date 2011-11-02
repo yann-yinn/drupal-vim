@@ -50,8 +50,7 @@ set autoindent
 set smartindent
 
 " ensure that drupal extensions are read as php files.
-" 'drupal' is added because we want snipMate to load
-" snippets located in snippets/drupal directory
+" note that snipMate use filetype to load snippets
 augroup drupal
   autocmd BufRead,BufNewFile *.module set filetype=php
   autocmd BufRead,BufNewFile *.theme set filetype=php
@@ -101,49 +100,43 @@ set hlsearch
 " not compatible with snipmate ??
 " set paste
 
-" boucler sur le fichier pour naviguer dans les résultat de la recherche
+" wrap search
 set wrapscan
 
-" ignorer la casse pour les recherches
+" ignore case for search
 set ignorecase
 
-"... mais si on cherche en majuscule, donner la priorité aux mots en majuscules
+" but if our search is uppercase, search first for uppercase
 set smartcase
 
-" les swap files me cassent les c*****
+" no swap file (temporary files for content recovery)
 set noswapfile
 
-" Toujours laisser des lignes visibles (içi 5) au dessus/en dessous du curseur quand on
-" atteint le début ou la fin de l'écran :
+" always keep at least 5 lines visible under the cursor when scrolling
 set scrolloff=5
 
 "================================
 " PLUGIN TAGLIST
 "================================
 
-" le plugin taglist doit connaitre l'emplacement du binaire ctags
+" taglist need to know where our ctags bin is located
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
-"F12 Switch on/off de la fenêtre du plugin TagList
+"F12 toogle taglist buffer
 nnoremap <silent> <F12> :TlistToggle<CR>
 
-" afficher la liste de tags dans le menu de GVIM
-let Tlist_Show_Menu=1
-
-" n'afficher les tags que pour le fichier courant
+" only print tags for current buffer
 let Tlist_Show_One_File=1
 
-" afficher la fenêtre de taglist dans une barre à droite
+" show taglist at the right of the screen
 let Tlist_Use_Right_Window=1
 
-" les noms de fonctions de drupal peuvent être loooooooooooooongs.
+" min width for taglist buffer
 let Tlist_WinWidth=50
 
-" n'afficher que les constantes, les classes et les fonctions. 
-" Les variables prennent de la place et ne me servent à rien
+" only print constants, class and functions in our taglist
 let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
-
 
 "================================
 " PLUGIN PROJECT
