@@ -90,6 +90,10 @@ set makeprg=php
 let mapleader = ";"
 let maplocalleader=";"
 
+" F2 pour sauter à la définition de la fonction (grace à ctags)
+noremap <F2> <C-w>]
+inoremap <F2> <Esc><C-w>]
+
 " montrer les numéros de lignes
 set nu
 
@@ -144,3 +148,21 @@ let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 " show / hide project window
 nmap <silent> <F9> <Plug>ToggleProject
+
+"================================
+" PLUGIN NERDTREE
+"================================
+
+" F9 lancer l'explorateur de fichier NERDTree
+noremap <F8> :NERDTreeToggle<CR>
+
+" positionner automatiquement gvim dans le répertoire root de NerdTree
+" Ca signifie que :!ls affichera la liste de ce répertoire
+let NERDTreeChDirMode=2
+
+" Montrer les marques pages en haut de l'explorateur de fichiers 
+let NERDTreeShowBookmarks=1
+
+" ranger nos bookmarks dans notre dossier .vim personnel 
+" sans le 'expand', ça ne semble pas marcher.
+let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
