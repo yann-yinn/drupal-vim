@@ -1,0 +1,1 @@
+twitvim-0.7.1.vmb: call delete('/home/tassadar/.vim/bundle/twitvim//plugin/twitvim.vim')|call delete('/home/tassadar/.vim/bundle/twitvim//doc/twitvim.txt')

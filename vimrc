@@ -119,6 +119,8 @@ set noswapfile
 " always keep at least 5 lines visible under the cursor when scrolling
 set scrolloff=5
 
+" always print status line
+set laststatus=2
 "================================
 " PLUGIN TAGLIST
 "================================
@@ -163,6 +165,15 @@ let NERDTreeChDirMode=2
 " Montrer les marques pages en haut de l'explorateur de fichiers 
 let NERDTreeShowBookmarks=1
 
-" ranger nos bookmarks dans notre dossier .vim personnel 
-" sans le 'expand', ça ne semble pas marcher.
-let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+"================================
+" PLUGIN TWITVIM
+"================================
+
+noremap <leader>tp :PosttoTwitter<CR>
+noremap <leader>tp :FriendsTwitter<CR>
+nnoremap <F5> :FriendsTwitter<cr>
+
+" open firefox when <leader>g on a link
+let twitvim_browser_cmd = 'firefox'
+" fetch tweets twenty by twenty
+let twitvim_count = 20
