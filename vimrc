@@ -121,6 +121,9 @@ set scrolloff=5
 
 " always print status line
 set laststatus=2
+
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ caractères\ %P
+
 "================================
 " PLUGIN TAGLIST
 "================================
