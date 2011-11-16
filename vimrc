@@ -148,18 +148,11 @@ let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 "================================
-" PLUGIN PROJECT
-"================================
-
-" show / hide project window
-nmap <silent> <F9> <Plug>ToggleProject
-
-"================================
 " PLUGIN NERDTREE
 "================================
 
 " F9 lancer l'explorateur de fichier NERDTree
-noremap <F8> :NERDTreeToggle<CR>
+noremap <F9> :NERDTreeToggle<CR>
 
 " positionner automatiquement gvim dans le répertoire root de NerdTree
 " Ca signifie que :!ls affichera la liste de ce répertoire
