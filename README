@@ -1,15 +1,18 @@
-Drupal-vim is a simple drupal-friendly vim configuration.
+Drupal-vim is a simple drupal-friendly vim configuration with hook autocompletion.
+
 It also contains two simple scripts to
 - generate tags for a project (that will be stored to ~/.vim/tags directory)
 - generate a dictionary for a project (that will be stored in dictionnaries directory).
 
-It already contains a drupal 6 dictionnary and a bundle of snippets for hooks
-and commun php functions.
-
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
-project : emulate a file explorer with a simple and editable text file.
+nerdtree : efficient and simple file explorer as in IDEs
+vcscommand : git, svn or other cvs support
 snipMate : a nice snippet generator : just type "hook_menu", press tab and it will generate a hook_menu for you :-)
+nerdcommenter : easy comment / uncomment
+taglist : list functions of a files
+manpageview : press maj+K on a php function to see a definition on php site.
+CSapprox : allow most of gvim colorsheme work on vim too.
 
 Sources :
 - D6 snippets from https://github.com/theunraveler/Drupal-Snippets-for-Vim
