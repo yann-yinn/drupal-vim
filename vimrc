@@ -2,37 +2,39 @@
 " GENERAL SETTINGS
 "===============================
 
-" use of pathogen plugin to keep each plugin in its own folder.
+"Use of pathogen plugin to keep each plugin in its own folder.
+"inside a 'bundle' directory. It's the only way suppress / add
+"plugin in a clean way.
 call pathogen#infect() 
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-"load file type plugins and indent files
+"Load file type plugins and indent files
 filetype indent plugin on
 
-" syntax coloration
+"Syntax coloration
 syntax on
    
-" our default colorscheme use 256 colors
+"Our default colorscheme use 256 colors
 set t_Co=256
 
-" default colorsheme
+"Default colorsheme
 colorscheme xoria256
 
 "===============================
 " DRUPAL SETTINGS
 "===============================
 
-" always edit in utf-8
-set encoding=utf-8
-
 " allow to go to the declaration of a function with <ctrl-]>
 " go to a project, use drupal-gentags script in scripts folder; then
 " set correct path here to load tags for a given project.
 
 " set tags+=~/.vim/tags/yourtags.tags
+
+"Always edit in utf-8.
+set encoding=utf-8
 
 "set the spaces instead of regular tab
 set expandtab
@@ -57,10 +59,6 @@ augroup drupal
   autocmd BufRead,BufNewFile *.profile set filetype=php
   autocmd BufRead,BufNewFile *.test set filetype=php
 augroup END
-
-" uncomment to highlight code lines and comments > 80 characters
-" highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
-" match OverLength '\%81v.*'
 
 "===============================
 " PHP SETTINGS
@@ -125,7 +123,7 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ characters\ %P
 
 "================================
-" PLUGIN TAGLIST
+" PLUGIN TAGLIST SETTINGS
 "================================
 
 " taglist need to know where our ctags bin is located
@@ -148,7 +146,7 @@ let Tlist_WinWidth=50
 " let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 "================================
-" PLUGIN NERDTREE
+" PLUGIN NERDTRE SETTINGS
 "================================
 
 " F9 toogle NERDTree file explorer.
