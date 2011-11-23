@@ -29,13 +29,10 @@ colorscheme xoria256
 set encoding=utf-8
 
 " allow to go to the declaration of a function with <ctrl-]>
-set tags+=~/.vim/tags/aef-trunk.tags
+" go to a project, use drupal-gentags script in scripts folder; then
+" set correct path here to load tags for a given project.
 
-"add drupal6 function as a dictionnary. allow autocompletion via ctrl-n
-set dict +=~/.vim/dictionaries/drupal6.dict
-
-" add dictionaries to autocomplete shortcut (crtl-p, ctrl-n)
-set complete-=k complete+=k
+" set tags+=~/.vim/tags/yourtags.tags
 
 "set the spaces instead of regular tab
 set expandtab
@@ -86,11 +83,13 @@ set makeprg=php
 " feel more cumfortable
 "================================
 
-" \ is definitly to difficult to reach !
+" \ is definitly too difficult to reach !
+" choose a more accessible 'leader' and 'localleader'
 let mapleader = ";"
 let maplocalleader=";"
 
-" F2 pour sauter à la définition de la fonction (grace à ctags)
+" jump to tag definition (for example a function) when press F2
+" you need ctags to make this works through a whole project
 noremap <F2> <C-w>]
 inoremap <F2> <Esc><C-w>]
 
@@ -122,15 +121,8 @@ set scrolloff=5
 " always print status line
 set laststatus=2
 
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ caractères\ %P
-
-" vim native explorer:
-" open window on a new vertical split
-let g:netrw_preview   = 1
-" lit folders as a tree
-let g:netrw_liststyle = 3
-" size of explorer view
-let g:netrw_winsize   = 50
+" print how many characters contains a line in status line
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ characters\ %P
 
 "================================
 " PLUGIN TAGLIST
@@ -142,42 +134,26 @@ let Tlist_Ctags_Cmd='/usr/bin/ctags'
 "F12 toogle taglist buffer
 nnoremap <silent> <F12> :TlistToggle<CR>
 
-" only print tags for current buffer
-let Tlist_Show_One_File=1
-
 " show taglist at the right of the screen
 let Tlist_Use_Right_Window=1
 
-" min width for taglist buffer
+" Only print tags for current buffer
+let Tlist_Show_One_File=1
+
+" min width for taglist buffer. Drupal functions name are usually pretty long
 let Tlist_WinWidth=50
 
 " only print constants, class and functions in our taglist
-let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
-let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
+" let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
+" let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 "================================
 " PLUGIN NERDTREE
 "================================
 
-" F9 lancer l'explorateur de fichier NERDTree
+" F9 toogle NERDTree file explorer.
 noremap <F9> :NERDTreeToggle<CR>
 
-" positionner automatiquement gvim dans le répertoire root de NerdTree
-" Ca signifie que :!ls affichera la liste de ce répertoire
-let NERDTreeChDirMode=2
-
-" Montrer les marques pages en haut de l'explorateur de fichiers 
+" show NERDTree bookmarks at the top of file explorer
 let NERDTreeShowBookmarks=1
 
-"================================
-" PLUGIN TWITVIM
-"================================
-
-noremap <leader>tp :PosttoTwitter<CR>
-noremap <leader>tp :FriendsTwitter<CR>
-nnoremap <F5> :FriendsTwitter<cr>
-
-" open firefox when <leader>g on a link
-let twitvim_browser_cmd = 'firefox'
-" fetch tweets twenty by twenty
-let twitvim_count = 20
