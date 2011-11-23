@@ -1,6 +1,6 @@
 Drupal-vim is a simple drupal-friendly vim configuration example.
 This is not a maintained distrubution but only an example of
-how powerful can vim with a fine tuned configuration.
+how powerful can vim be with a fine tuned configuration.
 
 It provides :
 - drupal indentation style
@@ -8,17 +8,25 @@ It provides :
 - php statements autocompletion
 - tags to jump do a function declaration like in Eclipse
 
-It contains two simple scripts to :
+It contains two simple bash scripts to :
 - generate tags for a project with Ctags (that will be stored to ~/.vim/tags directory)
 - generate a dictionary for a project (that will be stored in dictionnaries directory).
 
+You can check also "vimrc" project on drupal.org that now provides
+a vim plugin for Drupal.
+
+INSTALLATION :
+- download to your home folder
+- ln -s drupal-vim .vim
+- ln -s .vimrc drupal-vim/vimrc
+
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
-nerdtree : efficient and simple file explorer as in IDEs
+nerdtree : efficient and simple file explorer in a sidebar windows as in IDEs
 vcscommand : git, svn or other cvs support
 snipMate : a nice snippet generator : just type "hook_menu", press tab and it will generate a hook_menu for you :-)
 nerdcommenter : easy comment / uncomment
-taglist : list functions of a files
+taglist : list functions of a files in a sidebar window
 manpageview : press maj+K on a php function to see definition on php site inside vi.
 CSapprox : allow most of gvim colorsheme work on vim too.
 
