@@ -11,16 +11,16 @@ if version > 580
 endif
 let colors_name = "myslate"
 
-" fonctions et méthodes
+" functions and methods 
 :hi Normal guifg=yellow guibg=grey15
 
 " statements : if, while, return etc...
 :hi Statement guifg=green ctermfg=lightblue
 
-" couleur des variables
+" variables color
 :hi Identifier guifg=purple ctermfg=yellow
 
-" le $ des variables php
+" le $ from php variables
 :hi Operator guifg=orange ctermfg=Red
 
 " String
