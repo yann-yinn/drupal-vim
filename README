@@ -4,6 +4,9 @@ It also contains two simple scripts to
 - generate tags for a project (that will be stored to ~/.vim/tags directory)
 - generate a dictionary for a project (that will be stored in dictionnaries directory).
 
+colorscheme :
+xoria256
+
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
 nerdtree : efficient and simple file explorer as in IDEs
