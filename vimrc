@@ -124,6 +124,14 @@ set laststatus=2
 
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ caractères\ %P
 
+" vim native explorer:
+" open window on a new vertical split
+let g:netrw_preview   = 1
+" lit folders as a tree
+let g:netrw_liststyle = 3
+" size of explorer view
+let g:netrw_winsize   = 50
+
 "================================
 " PLUGIN TAGLIST
 "================================
