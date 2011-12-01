@@ -31,7 +31,7 @@ colorscheme xoria256
 " go to a project, use drupal-gentags script in scripts folder; then
 " set correct path here to load tags for a given project.
 
-" set tags+=~/.vim/tags/yourtags.tags
+set tags+=~/.vim/tags/aef-trunk.tags
 
 "Always edit in utf-8.
 set encoding=utf-8
@@ -142,8 +142,7 @@ let Tlist_Show_One_File=1
 let Tlist_WinWidth=50
 
 " only print constants, class and functions in our taglist
-" let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
-" let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
+let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 "================================
 " PLUGIN NERDTRE SETTINGS
