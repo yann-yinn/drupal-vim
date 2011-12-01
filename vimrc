@@ -144,13 +144,3 @@ let Tlist_WinWidth=50
 " only print constants, class and functions in our taglist
 let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
-"================================
-" PLUGIN NERDTRE SETTINGS
-"================================
-
-" F9 toogle NERDTree file explorer.
-noremap <F9> :NERDTreeToggle<CR>
-
-" show NERDTree bookmarks at the top of file explorer
-let NERDTreeShowBookmarks=1
-
