@@ -1,18 +1,26 @@
-
 /**
  * Implementation of hook_block()
  */
 function `Filename()`_block($op = 'list', $delta = 0, $edit = array()) {
-	switch ($op) {
-		case 'list':
-			${1}
-			break;
-		case 'configure':
-			break;
-		case 'save':
-			break;
-		case 'view':
-			break;
+	if ($op == 'list') {
+		$blocks[0] = array(
+				'info' => t('${1}'), 
+				'weight' => ${2}, 
+				'status' => ${3}, 
+				'region' => '${4}' ,
+				);
+		return $blocks;
+	}
+	else if ($op == 'view') {
+		switch ($delta) {
+			case 0:
+				// Your module will need to define this function to render the block.
+				$block = array(
+						'subject' => t('${5}'), 
+						'content' => mymodule_display_block_1(),
+						);
+				break;
+		}
+		return $block;
 	}
 }
-
