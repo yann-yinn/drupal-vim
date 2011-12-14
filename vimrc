@@ -117,7 +117,7 @@ set noswapfile
 set scrolloff=5
 
 " always print status line
-set laststatus=2
+"set laststatus=2
 
 " print how many characters contains a line in status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ characters\ %P
