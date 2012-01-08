@@ -31,7 +31,7 @@ colorscheme xoria256
 " go to a project, use drupal-gentags script in scripts folder; then
 " set correct path here to load tags for a given project.
 
-" set tags+=~/.vim/tags/yourtags.tags
+set tags+=~/.vim/tags/aef-trunk.tags
 
 "Always edit in utf-8.
 set encoding=utf-8
@@ -119,7 +119,7 @@ set noswapfile
 set scrolloff=5
 
 " always print status line
-set laststatus=2
+"set laststatus=2
 
 " print how many characters contains a line in status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ characters\ %P
@@ -144,16 +144,5 @@ let Tlist_Show_One_File=1
 let Tlist_WinWidth=50
 
 " only print constants, class and functions in our taglist
-" let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
-" let tlist_drupal_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
-
-"================================
-" PLUGIN NERDTRE SETTINGS
-"================================
-
-" F9 toogle NERDTree file explorer.
-noremap <F9> :NERDTreeToggle<CR>
-
-" show NERDTree bookmarks at the top of file explorer
-let NERDTreeShowBookmarks=1
+let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
