@@ -74,8 +74,10 @@ let php_parent_error_close = 1
 set syntax=php.doxygen
 
 " utiliser le compilateur php pour pouvoir vérifier la syntaxe
-" avec ':make %' sur un fichier
-set makeprg=php
+" avec ':make' sur un fichier
+" go to line with syntax error, press enter to go to next error
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
 
 "================================
 " feel more cumfortable
