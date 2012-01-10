@@ -144,3 +144,9 @@ let Tlist_WinWidth=50
 " only print constants, class and functions in our taglist
 let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
+"================================
+" PLUGIN NERDTREE
+"================================
+
+nmap <silent><F9> :NERDTreeToggle<CR>
+imap <silent><F9> :NERDTreeToggle<CR>
