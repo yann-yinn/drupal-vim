@@ -31,7 +31,8 @@ colorscheme xoria256
 " go to a project, use drupal-gentags script in scripts folder; then
 " set correct path here to load tags for a given project.
 
-set tags+=~/.vim/tags/aef-trunk.tags
+" set path to your tags file here
+set tags+=~/.vim/tags/mytags.tags
 
 "Always edit in utf-8.
 set encoding=utf-8
