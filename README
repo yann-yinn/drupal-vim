@@ -6,7 +6,7 @@ It provides :
 - drupal indentation style
 - hooks autocompletion
 - php statements autocompletion
-- tags to jump do a function declaration like in Eclipse
+- tags to jump to a function declaration like in Eclipse
 
 It contains two simple bash scripts to :
 - generate tags for a project with Ctags (that will be stored to ~/.vim/tags directory)
@@ -16,9 +16,9 @@ You can check also "vimrc" project on drupal.org that now provides
 a vim plugin for Drupal.
 
 INSTALLATION :
-- download to your home folder
-- ln -s drupal-vim .vim
-- ln -s .vimrc drupal-vim/vimrc
+- download "drupal-vim" to your home folder
+- ln -s drupal-vim .vim 
+- ln -s drupal-vim/vimrc .vimrc
 
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
