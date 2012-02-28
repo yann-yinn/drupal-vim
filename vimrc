@@ -158,6 +158,11 @@ let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 " open navigation tree at the emplacement of current buffer
 nmap <silent><F10> :NERDTreeFind<CR>
 
-" open Navigation window
-nmap <silent><F9> :NERDTreeToggle<CR>
-imap <silent><F9> :NERDTreeToggle<CR>
+" open Navigation window with native nerdtree
+"nmap <silent><F9> :NERDTreeToggle<CR>
+"imap <silent><F9> :NERDTreeToggle<CR>
+
+" open navigation with nerdree-tabs
+nmap <silent><F9> :NERDTreeTabsToggle<CR>
+imap <silent><F9> :NERDTreeTabsToggle<CR>
+
