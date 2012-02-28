@@ -80,6 +80,10 @@ set syntax=php.doxygen
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
+" track php syntax errors for current file.
+noremap <F5> :make %<CR>
+inoremap <F5> :make %<CR>
+
 "================================
 " feel more cumfortable
 "================================
@@ -151,5 +155,9 @@ let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 " PLUGIN NERDTREE
 "================================
 
+" open navigation tree at the emplacement of current buffer
+nmap <silent><F10> :NERDTreeFind<CR>
+
+" open Navigation window
 nmap <silent><F9> :NERDTreeToggle<CR>
 imap <silent><F9> :NERDTreeToggle<CR>
