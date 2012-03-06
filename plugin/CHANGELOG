@@ -1,0 +1,66 @@
+###############################################################################
+1.0.2 changelog from 1.0.1
+###############################################################################
+
+changes     :
+- add '!' on function declaration to override any declarated function with the
+  same name thx to Michael Bahnmiller
+- add new path to check for a windows system. If you are using windows put the
+  files (debugger.vim and debugger.vim) your $VIM/vimfiles/plugin this usually 
+  "C:\Program Files\Vim\vimfiles\plugin" thx to ning
+
+bug fixes   :
+- bugs on windows system regarding the file path (from xdebug xml message)
+  which append '/' at the beginning, thx to Ning for notified me
+- cannot set breakpoint when the debugger isn't running (my bad) thx to Michael
+  Bahnmiller
+
+known issue :
+- do not reorder tab while debugging session is running!, unless you want to 
+  see crazy things
+
+
+###############################################################################
+1.0.1 changelog from 1.0.0
+###############################################################################
+
+new         :
+- add option to use dedicated debugging tab (this way you dont have to worry
+  bout your undo history in other tab would get lost) suggested by Michael
+  Bahnmiller
+- add option to set socket timeout
+
+changes     :
+- update file header in debugger.py and debugger.vim
+- if a debugging command reach code end, and the debugger stop gracefully, the
+  debugging interface will be closed/restore automatically, user doesnt have to
+  explicitly press F6
+- the TRACE_WINDOW will only visible if the debugger is in debugging mode, or
+  when g:debuggerDebugMode=1, cause it's the only purpose of a trace window
+  (logging and tracing), in normal use you wouldn't use this window, it will
+  save more space
+- "Not Connected" message is change to "Debugger is not running" message
+- the F5 and F6 doesnt get map directly to python function, but to a VimScript
+  function, this way user can write a preparation for each debugging start, or
+  cleanups for every debugging ends
+- add "except: NotConnectedException" for every try..except.. wrapper function
+  which display Not Running message, to make sure each of this command only
+  used when debugging session is started
+
+bug fixes   :
+- remove error message duplication
+- remove bug when timeout happen(trace window shown up, with a some exception
+  error) and show "Connection Timeout.." message instead
+
+###############################################################################
+1.0.0 changelog from basescript :
+###############################################################################
+
+new         :
+- add tab-page support
+
+bug fixes   :
+- remove bug when debugging session ends original tabs duplicated
+- will only restore working/debugging tab, doesn't mess with other tab
+- each command will make sure that user are opening the working/debugging tab,
+  so the window layout wouldn't get crazy anymore
