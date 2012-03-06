@@ -166,3 +166,6 @@ nmap <silent><F10> :NERDTreeFind<CR>
 nmap <silent><F9> :NERDTreeTabsToggle<CR>
 imap <silent><F9> :NERDTreeTabsToggle<CR>
 
+" for xdebug
+let g:debuggerMaxDepth = 10
+
