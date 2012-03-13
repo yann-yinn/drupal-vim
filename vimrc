@@ -80,23 +80,10 @@ set syntax=php.doxygen
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
-" track php syntax errors for current file.
-"noremap <F5> :make %<CR>
-"inoremap <F5> :make %<CR>
 
 "================================
 " feel more cumfortable
 "================================
-
-" \ is definitly too difficult to reach !
-" choose a more accessible 'leader' and 'localleader'
-let mapleader = ";"
-let maplocalleader=";"
-
-" jump to tag definition (for example a function) when press F2
-" you need ctags to make this works through a whole project
-noremap <F2> <C-w>]
-inoremap <F2> <Esc><C-w>]
 
 " montrer les numéros de lignes
 set nu
@@ -130,14 +117,11 @@ set scrolloff=5
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ characters\ %P
 
 "================================
-" PLUGIN TAGLIST SETTINGS
+" CONFIG PLUGIN TAGLIST SETTINGS
 "================================
 
 " taglist need to know where our ctags bin is located
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
-
-"F12 toogle taglist buffer
-nnoremap <silent> <F12> :TlistToggle<CR>
 
 " show taglist at the right of the screen
 let Tlist_Use_Right_Window=1
@@ -152,20 +136,43 @@ let Tlist_WinWidth=50
 let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 
 "================================
-" PLUGIN NERDTREE
+" CONFIG PLUGIN XDEBUG
 "================================
 
-" open navigation tree at the emplacement of current buffer
-nmap <silent><F10> :NERDTreeFind<CR>
+" for xdebug : we want to see what's inside array, until x levels
+let g:debuggerMaxDepth = 10
+
+"================================
+" MAPPINGS
+" Please note that some keys are already used
+" by the debugger:
+" F1, F2, F3, F4, F5, F6, F11, F12 
+" So let's deal with F7, F8, F9 & F10
+"================================
+
+" \ is definitly too difficult to reach !
+" choose a more accessible 'leader' and 'localleader'
+let mapleader = ";"
+let maplocalleader=";"
+
+" jump to tag definition (for example a function) when press F2
+" you need ctags to make this works through a whole project
+noremap <F7> <C-w>]
+inoremap <F7> <Esc><C-w>]
+
+"F12 toogle taglist buffer
+nnoremap <silent> <F9> :TlistToggle<CR>
 
 " open Navigation window with native nerdtree
 "nmap <silent><F9> :NERDTreeToggle<CR>
 "imap <silent><F9> :NERDTreeToggle<CR>
 
-" open navigation with nerdree-tabs
-nmap <silent><F9> :NERDTreeTabsToggle<CR>
-imap <silent><F9> :NERDTreeTabsToggle<CR>
+" open navigation with nerdree-tabs, which make
+" NerdTree behave more like in a classic IDE
+nmap <silent><F8> :NERDTreeTabsToggle<CR>
+imap <silent><F8> :NERDTreeTabsToggle<CR>
 
-" for xdebug
-let g:debuggerMaxDepth = 10
+" open navigation tree at the emplacement of current buffer
+nmap <silent><F10> :NERDTreeFind<CR>
+
 
