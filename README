@@ -2,6 +2,11 @@ Drupal-vim is a simple drupal-friendly vim configuration example.
 This is not a maintained distrubution but only an example of
 how powerful can vim be with a fine tuned configuration.
 
+REQUIREMENTS
+you'll need
+- ctags to generate tags for your project
+- xdebug to use the debugger
+
 It provides :
 - drupal indentation style
 - hooks autocompletion
