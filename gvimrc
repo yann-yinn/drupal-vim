@@ -1,5 +1,8 @@
 " example of gvimrc
 
+" remove toolbar
+set go=
+
 " use windows friendly shortcuts with gvim
 " So that your friends don't shout at you
 " because they can't do anything with your fuc**g editor
@@ -17,8 +20,7 @@ inoremap <C-X> <C-R>+
 vnoremap <C-C> "+y
 inoremap <C-C> <C-R>y
 
-" CTRL-V is paste
-noremap <C-V> "+gP
+" CTRL-V is paste in insert mode.
 inoremap <C-V> <C-R>+
 
 tmenu ToolBar.-Sep- Toggle display of File explorator

@@ -32,7 +32,7 @@ colorscheme xoria256
 " set correct path here to load tags for a given project.
 
 " set path to your tags file here
-" set tags+=~/.vim/tags/mytags.tags
+set tags+=~/.vim/tags/aef-trunk.tags
 
 "Always edit in utf-8.
 set encoding=utf-8
@@ -161,7 +161,7 @@ noremap <F7> <C-w>]
 inoremap <F7> <Esc><C-w>]
 
 "F12 toogle taglist buffer
-nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <F10> :TlistToggle<CR>
 
 " open Navigation window with native nerdtree
 "nmap <silent><F9> :NERDTreeToggle<CR>
@@ -169,10 +169,10 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 
 " open navigation with nerdree-tabs, which make
 " NerdTree behave more like in a classic IDE
-nmap <silent><F8> :NERDTreeTabsToggle<CR>
-imap <silent><F8> :NERDTreeTabsToggle<CR>
+nmap <silent><F9> :NERDTreeTabsToggle<CR>
+imap <silent><F9> :NERDTreeTabsToggle<CR>
 
 " open navigation tree at the emplacement of current buffer
-nmap <silent><F10> :NERDTreeFind<CR>
+nmap <silent><F11> :NERDTreeFind<CR>
 
 
