@@ -38,4 +38,5 @@ amenu ToolBar.tagsphp :! ~/.vim/scripts/php-gentags.sh<CR>
 tmenu ToolBar.tagsdrupal Generate DRUPAL php tags from current directory
 amenu ToolBar.tagsdrupal :! ~/.vim/scripts/drupal-gentags.sh<CR>
 
+noremap <RightMouse> <F12> 
 

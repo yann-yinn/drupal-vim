@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/etc/php5/apache2'
+let g:netrw_dirhist_2='/home/ybo/dev/insead/svn/branches/dev/knwoledge'
+let g:netrw_dirhist_3='/home/ybo/dev/insead/svn/branches/dev/sites/all/modules/custom/palpix_toolbox'

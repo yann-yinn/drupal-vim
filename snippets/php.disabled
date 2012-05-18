@@ -1,0 +1,92 @@
+########################
+# Classiques
+########################
+snippet ('
+	('${1:string}');
+snippet '
+	'${1:string}';
+snippet "
+	"${1:string}";
+snippet echo
+	echo "${1:string}"${2};
+snippet print
+	print "${1:string}"${2};
+snippet var_dump
+	var_dump(${1:variable});
+snippet print_r
+	print_r(${1:variable});
+snippet array
+	$${1:arrayName} = array('${2}' => ${3});${4}
+snippet if
+	if (${1:/* condition */}) {
+		${2:// code...}
+	}
+snippet ife
+	if (${1:/* condition */}) {
+		${2:// code...}
+	} else {
+		${3:// code...}
+	}
+	${4}
+snippet else
+	else {
+		${1:// code...}
+	}
+snippet elseif
+	elseif (${1:/* condition */}) {
+		${2:// code...}
+	}
+# Tertiary conditional
+snippet ter
+	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
+snippet switch
+	switch ($${1:variable}) {
+		case '${2:value}':
+			${3:// code...}
+			break;
+		${5}
+		default:
+			${4:// code...}
+			break;
+	}
+snippet case
+	case '${1:value}':
+		${2:// code...}
+		break;${3}
+snippet for
+	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+		${4: // code...}
+	}
+snippet foreach
+	foreach ($${1:variable} as $${2:key}) {
+		${3:// code...}
+	}
+
+########################
+# class et fonctions
+########################
+snippet class
+	/**
+	 * ${1}
+	 */
+	class ${2:ClassName}
+	{
+		${3}
+		function ${4:__construct}($${5:argument})
+		{
+			${6:// code...}
+		}
+	}
+snippet function
+	/**
+	 * ${1}
+	 */
+	function ${2:FunctionName}($${3:argument}) {
+		${4:// code...}
+		return $${5:return};
+	}
+snippet cfunction
+	${1:public }function ${2:FunctionName}(${3})
+	{
+		${4:// code...}
+	}
