@@ -16,14 +16,14 @@ It provides :
 
 It contains two simple bash scripts to :
 - generate tags for a project with Ctags (that will be stored to ~/.vim/tags directory)
-- generate a dictionary for a project (that will be stored in dictionnaries directory).
 
 You can check also "vimrc" project on drupal.org that now provides a vim plugin for Drupal.
 
 INSTALLATION :
 - download "drupal-vim" to your home folder
-- ln -s .vim drupal-vim
-- ln -s .vimrc drupal-vim/vimrc
+- ln -s drupal-vim .vim
+- ln -s drupal-vim/vimrc .vimrc
+- ln -s drupal-vim/gvimrc .gvimrc
 
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
