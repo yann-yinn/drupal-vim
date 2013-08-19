@@ -1,4 +1,19 @@
 "===============================
+" PROJECT CONFIGURATION : change those
+" settings according to your project
+"===============================
+
+" taglist need to know where our ctags bin is located to generate tags
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
+
+" allow to go to the declaration of a function with <ctrl-]>
+" go to a project, use drupal-gentags script in scripts folder; then
+" set correct path here to load tags for a given project.
+
+" set path to your tags file here
+set tags+=~/.vim/tags/project.tags
+
+"===============================
 " GENERAL SETTINGS
 "===============================
 
@@ -27,12 +42,6 @@ colorscheme xoria256
 " DRUPAL SETTINGS
 "===============================
 
-" allow to go to the declaration of a function with <ctrl-]>
-" go to a project, use drupal-gentags script in scripts folder; then
-" set correct path here to load tags for a given project.
-
-" set path to your tags file here
-set tags+=~/.vim/tags/aef.tags
 
 "Always edit in utf-8.
 set encoding=utf-8
@@ -80,7 +89,6 @@ set syntax=php.doxygen
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
-
 "================================
 " feel more cumfortable
 "================================
@@ -119,9 +127,6 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{strlen(getline('.'))}\ character
 "================================
 " CONFIG PLUGIN TAGLIST SETTINGS
 "================================
-
-" taglist need to know where our ctags bin is located
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
 " show taglist at the right of the screen
 let Tlist_Use_Right_Window=1
