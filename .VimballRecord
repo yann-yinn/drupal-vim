@@ -1,0 +1,1 @@
+twitvim-0.8.1.vmb: call delete('/home/yann/.vim/plugin/twitvim.vim')|call delete('/home/yann/.vim/doc/twitvim.txt')

@@ -21,6 +21,7 @@ set tags+=~/.vim/tags/project.tags
 "inside a 'bundle' directory. It's the only way suppress / add
 "plugin in a clean way.
 call pathogen#infect() 
+call pathogen#helptags()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
