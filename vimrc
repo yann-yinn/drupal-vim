@@ -143,6 +143,12 @@ let tlist_php_settings = 'php;d:Constantes;c:Classes;f:Fonctions'
 let g:debuggerMaxDepth = 10
 
 "================================
+" CONFIG NERDTREE
+"================================
+set autochdir
+let NERDTreeChDirMode=2
+
+"================================
 " MAPPINGS
 " Please note that some keys are already used
 " by the debugger:

@@ -1,7 +1,7 @@
 " example of gvimrc
 
 " remove toolbar
-set go=
+" set go=
 
 " use windows friendly shortcuts with gvim
 " So that your friends don't shout at you

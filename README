@@ -1,9 +1,6 @@
-Drupal-vim is a simple drupal-friendly vim configuration example.
-This is not a maintained distrubution but only an example of
-how powerful can vim be with a fine tuned configuration.
+Drupal-vim is a simple drupal-friendy vim configuration example.
 
 REQUIREMENTS
-you'll need
 - ctags to generate tags for your project
 - xdebug to use the debugger
 
@@ -22,8 +19,8 @@ You can check also "vimrc" project on drupal.org that now provides a vim plugin 
 
 INSTALLATION :
 - download "drupal-vim" to your home folder
-- ln -s .vim drupal-vim
-- ln -s .vimrc drupal-vim/vimrc
+- ln -s drupal-vim .vim (or rename to "drupal-vim" to ".vim")
+- ln -s drupal-vim/vimrc .vimrc
 
 PLUG-INS :
 vim-pathogen : clean installation / removal of plug-ins
