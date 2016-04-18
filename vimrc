@@ -18,10 +18,10 @@ filetype indent plugin on
 syntax on
    
 "Our default colorscheme use 256 colors
-set t_Co=256
+"set t_Co=256
 
 "Default colorsheme
-colorscheme xoria256
+colorscheme molokai
 
 "===============================
 " DRUPAL SETTINGS
